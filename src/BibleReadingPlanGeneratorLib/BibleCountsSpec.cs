@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Ardalis.GuardClauses;
 
 namespace BibleReadingPlanGeneratorLib
@@ -30,24 +29,5 @@ namespace BibleReadingPlanGeneratorLib
             Guard.Against.NullOrEmpty(characterCounts, nameof(characterCounts));
             CharacterCounts = characterCounts;
         }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Name, Abbreviation, WordCounts, CharacterCounts);
-        }
-
-        public override bool Equals(object obj)
-        {
-            BibleCountsSpec that = obj as BibleCountsSpec;
-            if (that == null)
-            {
-                return false;
-            }
-            return Name == that.Name &&
-                Abbreviation == that.Abbreviation &&
-                WordCounts == that.WordCounts &&
-                CharacterCounts == that.CharacterCounts;
-        }
-
     }
 }

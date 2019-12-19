@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Ardalis.GuardClauses;
 
@@ -96,19 +94,5 @@ namespace BibleReadingPlanGeneratorLib
                 matches.Add(last);
             }
         }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Name, Books, CountsSpecs);
-        }
-
-        public override bool Equals(object obj)
-        {
-            BibleSpec that = obj as BibleSpec;
-            return Name == that.Name &&
-                Books == that.Books &&
-                CountsSpecs == that.CountsSpecs;
-        }
-
     }
 }
