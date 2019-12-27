@@ -12,6 +12,7 @@ namespace BibleReadingPlanGeneratorLib
         [JsonIgnore]
         public BibleSpec BibleSpec { get; set; } = null;
 
+        [JsonIgnore]
         public int BookIndex
         {
             get
@@ -36,8 +37,10 @@ namespace BibleReadingPlanGeneratorLib
             }
         }
 
+        [JsonIgnore]
         public int BookNumber => BookIndex + 1;
 
+        [JsonIgnore]
         public int ChapterIndex => ChapterNumber - 1;
 
         public BookAndChapterSpec()
@@ -53,6 +56,11 @@ namespace BibleReadingPlanGeneratorLib
             BookName = bookName;
             Guard.Against.OutOfRange(chapterNumber, nameof(chapterNumber), 1, int.MaxValue);
             ChapterNumber = chapterNumber;
+        }
+
+        public override string ToString()
+        {
+            return "" + BookName + " " + ChapterNumber;
         }
     }
 }

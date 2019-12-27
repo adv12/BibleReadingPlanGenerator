@@ -1,0 +1,124 @@
+{
+  "name": "Robert Roberts",
+  "numberOfDays": 365,
+  "groups": [
+    {
+      "name": "Old Testament 1",
+      "sections": [
+        {
+          "start": {
+            "bookName": "Genesis",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Job",
+            "chapterNumber": 42
+          }
+        }
+      ],
+      "repetitions": 1
+    },
+    {
+      "name": "Old Testament 2",
+      "sections": [
+        {
+          "start": {
+            "bookName": "Psalms",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Malachi",
+            "chapterNumber": 4
+          }
+        }
+      ],
+      "repetitions": 1
+    },
+    {
+      "name": "New Testament",
+      "sections": [
+        {
+          "start": {
+            "bookName": "Matthew",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Matthew",
+            "chapterNumber": 28
+          }
+        },
+        {
+          "start": {
+            "bookName": "Romans",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Romans",
+            "chapterNumber": 16
+          }
+        },
+        {
+          "start": {
+            "bookName": "Mark",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Mark",
+            "chapterNumber": 16
+          }
+        },
+        {
+          "start": {
+            "bookName": "1 Corinthians",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "2 Corinthians",
+            "chapterNumber": 13
+          }
+        },
+        {
+          "start": {
+            "bookName": "Luke",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Luke",
+            "chapterNumber": 24
+          }
+        },
+        {
+          "start": {
+            "bookName": "Galatians",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Philippians",
+            "chapterNumber": 4
+          }
+        },
+        {
+          "start": {
+            "bookName": "John",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Acts",
+            "chapterNumber": 28
+          }
+        },
+        {
+          "start": {
+            "bookName": "Colossians",
+            "chapterNumber": 1
+          },
+          "end": {
+            "bookName": "Revelation",
+            "chapterNumber": 22
+          }
+        }
+      ],
+      "repetitions": 2
+    }
+  ]
+}

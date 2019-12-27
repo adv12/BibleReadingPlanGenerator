@@ -1,5 +1,4 @@
-﻿using System;
-using Ardalis.GuardClauses;
+﻿using Ardalis.GuardClauses;
 
 namespace BibleReadingPlanGeneratorLib
 {
@@ -20,6 +19,16 @@ namespace BibleReadingPlanGeneratorLib
             Start = start;
             Guard.Against.Null(end, nameof(end));
             End = end;
+        }
+
+        public void SetBibleSpec(BibleSpec spec)
+        {
+            Start.BibleSpec = End.BibleSpec = spec;
+        }
+
+        public override string ToString()
+        {
+            return "" + Start?.ToString() + " - " + End?.ToString();
         }
     }
 }
