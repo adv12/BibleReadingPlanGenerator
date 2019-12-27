@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text.Json;
 using BibleReadingPlanGeneratorLib;
 
@@ -17,7 +18,28 @@ namespace BibleReadingPlanGeneratorCLI
             BibleSpec spec = 
                 JsonSerializer.Deserialize<BibleSpec>(json, options);
 
-            var matches = spec.FilterBooks("so");
+            while (true)
+            {
+                Console.WriteLine("Enter a section spec:");
+                string input = Console.ReadLine();
+                if (input.Trim().ToLower() == "exit")
+                {
+                    break;
+                }
+                SectionParseResult result = spec.ParseSection(input);
+                if (result.SectionSpec != null)
+                {
+                    Console.WriteLine(JsonSerializer.Serialize(result.SectionSpec, options));
+                }
+                else
+                {
+                    foreach (ParseError error in result.Errors)
+                    {
+                        Console.WriteLine("Error: " + error.Text + ": " + error.ErrorText);
+                    }
+                }
+                Console.WriteLine();
+            }
 
             //List<List<int>> wordCounts = spec.CountsSpecs[0].WordCounts;
             //for (int i = 0; i < spec.Books.Count; i++)

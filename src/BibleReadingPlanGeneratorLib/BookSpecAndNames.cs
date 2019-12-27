@@ -16,5 +16,13 @@ namespace BibleReadingPlanGeneratorLib
             Guard.Against.Null(name, nameof(name));
             Names.Add(name);
         }
+
+        public BookSpecAndNames(BookSpec bookSpec, IEnumerable<string> names)
+        {
+            Guard.Against.Null(bookSpec, nameof(bookSpec));
+            BookSpec = bookSpec;
+            Guard.Against.NullOrEmpty(names, nameof(names));
+            Names.AddRange(names);
+        }
     }
 }
